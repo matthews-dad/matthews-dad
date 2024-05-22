@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="money.png" />
+    <title>Economic Inequality is not tuff</title>
+</head>
+<body>
+    <!--<h2 class="scrollText" style="top:%;"></h2>-->
+    <div class="container">
+        <div class="slides" style="height:70vh;">
+        </div>
+        <div class="slides">
+            <h2 class="scrollText" style="top:33%;">2 centuries ago...</h2>
+            <h2 class="scrollText" style="top:66%;">Our founding fathers united the Thirteen Colonies to fight the War of Independence.</h2>
+        </div>
+        <div class="slides">
+            <h2 class="scrollText" style="top:0%;">Out of control money printing to fund the Revolutionary War at both</h2>
+            <h2 class="scrollText" style="top:5%;">the state and federal levels led to incredible hyperinflation during the period of</h2>
+            <h2 class="scrollText" style="top:10%;">the first Continental Congress.</h2>
+            <h2 class="scrollText" style="top:43%;">Economic imbalance is still problematic today because it worsens inequality,</h2>
+            <h2 class="scrollText" style="top:48%;">restricts social mobility, and undermines social cohesion. Lets dive in deeper with the</h2>
+            <h2 class="scrollText" style="top:53%;">help of...</h2>
+            <h2 style="top:90%;font-size:90px;">Matthew Bu!</h2>
+        </div>
+        <script>
+            const texts = document.querySelectorAll('.scrollText');
+        
+            const observerOptions = {
+              root: null,
+              rootMargin: '0px',
+              threshold: 0
+            };
+        
+            const observer = new IntersectionObserver((entries, observer) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  const text = entry.target;
+                  window.addEventListener('scroll', () => {
+                    const rect = text.getBoundingClientRect();
+                    const offset = window.innerHeight - rect.top;
+                    const newSize = 30 + Math.max(0, offset) / 80; // Adjust the division factor for different growth rates
+                    text.style.fontSize = `${newSize}px`;
+                  });
+                }
+              });
+            }, observerOptions);
+        
+            texts.forEach(text => {
+              observer.observe(text);
+            });
+          </script>
+    </div>
+    <div class="container2">
+        <div class="slides1">
+            <h2>How is economic imbalance a problem in the Boys in the Boat?</h2>
+            <div class="container3">
+                <h3>Economic imbalance subtly underpins the backdrop of 'The Boys in the Boat,' set during the Great Depression. Characters like Joe Rantz come from working-class backgrounds, facing economic hardship and limited opportunities. Yet, amidst this disparity, rowing offers a chance for individuals like Joe to excel, showcasing the transformative power of sports. While not the central theme, economic struggles shape the narrative, emphasizing resilience and determination in the face of adversity.</h3>
+                <br>
+                <br>
+                <h3>A quote that shows an example of economic imbalanace is "The depression took everyone by the throat and squeezed until there was nothing left of their former lives. It was especially hard on the Rantz family" (Brown 32). Here, the narrative explicitly acknowledges the harsh impact of economic turmoil on families like the Rantz's, illustrating the broader societal struggles of the era.</h3>
+                <br>
+                <br>
+                <img src="joe.jpg" alt="joe" style="height: 400px;margin-left:25%;margin-right:25%;">
+            </div>
+        </div>
+        <div class="slides1 slide2">
+            <div class="container3">
+                <h3>Currently in America, lower middle class citizens have had “stagnating earnings and fewer economic resources than [they] had in the early 1990s.” This adversely affects home ownership, retirement, health, and life expectancy. However, the upper middle class fared significantly better, a divide that has widened since the 1990s.</h3>
+                <br>
+                <br>
+                <h3>Not only could the less wealthy fall behind affluent peers due to access to technology, they are also less inclined to play sports at all. Budget cuts also affect the number of people playing sports in school, which could be a larger issue in less wealthy communities.</h3>
+                <br>
+                <br>
+                <h3>In 1900s Germany, a sports guide claimed that a perfect rowing team can only be formed by people with the same educational and cultural background.</h3>
+            </div>
+            <h2>How is economic imbalance a problem in the current world?</h2>
+        </div>
+        <div class="slides1 slide3">
+            <div class="container3">
+                <h2>What can we do to reduce the inequity of the economy?</h2>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h3>Currently in America, lower middle class citizens have had “stagnating earnings and fewer economic resources than [they] had in the early 1990s.” This adversely affects home ownership, retirement, health, and life expectancy. However, the upper middle class fared significantly better, a divide that has widened since the 1990s.</h3>
+                <br>
+                <br>
+                <h3>Not only could the less wealthy fall behind affluent peers due to access to technology, they are also less inclined to play sports at all. Budget cuts also affect the number of people playing sports in school, which could be a larger issue in less wealthy communities.</h3>
+                <br>
+                <br>
+                <h3>In 1900s Germany, a sports guide claimed that a perfect rowing team can only be formed by people with the same educational and cultural background.</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
