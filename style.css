@@ -39,7 +39,7 @@ body{
 }
 .slides h2{
     font-weight:600px;
-    font-size:30px;
+    font-size:6%;
     position:absolute;
     align-self:center;
     margin-left: 5%;
@@ -58,14 +58,14 @@ body{
 }
 .slides1 h2{
     font-weight:600px;
-    font-size:60px;
+    font-size:6%;
     align-self:center;
     margin-left: 5%;
     margin-right: 5%;
 }
 .slides1 h3{
     font-weight:600px;
-    font-size:20px;
+    font-size:2%;
     align-self:center;
     margin-left: 5%;
     margin-right: 5%;
