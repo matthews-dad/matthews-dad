@@ -19,4 +19,4 @@ var scrollInterval = setInterval(function() {
         // Stop the scrolling
         clearInterval(scrollInterval);
     }
-}, 35);
+}, 12);
