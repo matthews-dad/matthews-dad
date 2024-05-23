@@ -40,7 +40,7 @@
                   window.addEventListener('scroll', () => {
                     const rect = text.getBoundingClientRect();
                     const offset = window.innerHeight - rect.top;
-                    const newSize = 70 - Math.max(0, offset) / 80; // Adjust the division factor for different growth rates
+                    const newSize = 70 - Math.max(0, offset) / 40; // Adjust the division factor for different growth rates
                     text.style.fontSize = `${newSize}px`;
                   });
                 }
