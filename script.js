@@ -4,7 +4,7 @@
   //} 
 //autoScrollDown();
 // Target scroll position
-var targetScrollPosition = 270vh; // Replace with the desired scroll position
+var targetScrollPosition = 2000; // Replace with the desired scroll position
 
 // Interval for scrolling
 var scrollInterval = setInterval(function() {
@@ -19,4 +19,4 @@ var scrollInterval = setInterval(function() {
         // Stop the scrolling
         clearInterval(scrollInterval);
     }
-}, 50);
+}, 35);
