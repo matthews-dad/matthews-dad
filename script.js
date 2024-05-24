@@ -1,10 +1,8 @@
-//function autoScrollDown() { 
-    //window.scrollBy(0, 1); // You can adjust the second parameter to control the speed of the scroll 
-    //setTimeout(autoScrollDown, 0.5); // You can adjust the time interval based on your preference 
-  //} 
-//autoScrollDown();
-// Target scroll position
-var targetScrollPosition = 2000; // Replace with the desired scroll position
+// Target scroll position in vh (viewport height)
+var targetScrollPositionVh = 270; // Replace with the desired scroll position in vh
+
+// Convert vh to pixels
+var targetScrollPositionPx = (targetScrollPositionVh / 100) * window.innerHeight;
 
 // Interval for scrolling
 var scrollInterval = setInterval(function() {
@@ -15,7 +13,7 @@ var scrollInterval = setInterval(function() {
     window.scrollBy(0, 1);
 
     // Check if the current scroll position has reached or exceeded the target
-    if (currentScrollPosition >= targetScrollPosition) {
+    if (currentScrollPosition >= targetScrollPositionPx) {
         // Stop the scrolling
         clearInterval(scrollInterval);
     }
