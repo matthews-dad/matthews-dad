@@ -1,5 +1,5 @@
 // Target scroll position in vh (viewport height)
-var targetScrollPositionVh = 170; // Replace with the desired scroll position in vh
+var targetScrollPositionVh = 270; // Replace with the desired scroll position in vh
 
 // Convert vh to pixels
 var targetScrollPositionPx = (targetScrollPositionVh / 100) * window.innerHeight;
