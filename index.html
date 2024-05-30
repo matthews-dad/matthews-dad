@@ -26,60 +26,32 @@
             <h2 class="scrollText" style="top:78%;">Economic imbalance is still problematic today because it</h2>
             <h2 class="scrollText" style="top:82%;">worsens inequality, restricts social mobility, and undermines</h2>
             <h2 class="scrollText" style="top:86%;">social cohesion. So lets dive in deeper with the help of...</h2>
-            <h2 style="top:95%;font-size:500%;">Alex Tran! (Self-proclaimed alpha wolf)</h2>
+            <h2 style="top:95%;font-size:4vw;">Alex Tran! (Self-proclaimed alpha wolf)</h2>
         </div>
         <script>
-          const texts = document.querySelectorAll('.scrollText');
-      
-          window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            texts.forEach(text => {
-              const newSize = 450 - scrollY / 10; // Adjust the division factor for different growth rates
-              text.style.fontSize = `${newSize}%`;
+            const texts = document.querySelectorAll('.scrollText');
+        
+            const observer = new IntersectionObserver(entries => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  const text = entry.target;
+        
+                  window.addEventListener('scroll', () => {
+                    const scrollY = window.scrollY;
+                    const textTop = text.getBoundingClientRect().top + window.scrollY;
+                    const newSize = Math.max(1, 1.5 - (scrollY - textTop) / 800); // Ensure font size does not go below 1vw
+                    text.style.fontSize = `${newSize}vw`; // Use vw (viewport width) units
+                  });
+                }
+              });
             });
-          });
-        </script>
+        
+            texts.forEach(text => observer.observe(text));
+          </script>          
     </div>
     <div class="container2">
         <div class="slides1">
-            <h2>How is economic imbalance a problem in the Boys in the Boat?</h2>
-            <div class="container3">
-                <h3>Economic imbalance subtly underpins the backdrop of 'The Boys in the Boat,' set during the Great Depression. Characters like Joe Rantz come from working-class backgrounds, facing economic hardship and limited opportunities. Yet, amidst this disparity, rowing offers a chance for individuals like Joe to excel, showcasing the transformative power of sports. While not the central theme, economic struggles shape the narrative, emphasizing resilience and determination in the face of adversity.</h3>
-                <br>
-                <br>
-                <h3>A quote that shows an example of economic imbalanace is "The depression took everyone by the throat and squeezed until there was nothing left of their former lives. It was especially hard on the Rantz family" (Brown 32). Here, the narrative explicitly acknowledges the harsh impact of economic turmoil on families like the Rantz's, illustrating the broader societal struggles of the era.</h3>
-                <br>
-                <br>
-                <img src="joe.jpg" alt="joe" style="width: 50%;margin-left:25%;margin-right:25%;">
-            </div>
-        </div>
-        <div class="slides1 slide2">
-            <div class="container3">
-                <h3>Currently in America, lower middle class citizens have had “stagnating earnings and fewer economic resources than [they] had in the early 1990s.” This adversely affects home ownership, retirement, health, and life expectancy. However, the upper middle class fared significantly better, a divide that has widened since the 1990s.</h3>
-                <br>
-                <br>
-                <h3>Not only could the less wealthy fall behind affluent peers due to access to technology, they are also less inclined to play sports at all. Budget cuts also affect the number of people playing sports in school, which could be a larger issue in less wealthy communities.</h3>
-                <br>
-                <br>
-                <h3>In 1900s Germany, a sports guide claimed that a perfect rowing team can only be formed by people with the same educational and cultural background.</h3>
-            </div>
-            <h2>How is economic imbalance a problem in the current world?</h2>
-        </div>
-        <div class="slides1 slide3">
-            <div class="container3">
-                <h2>What can we do to reduce the inequity of the economy?</h2>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h3>Currently in America, lower middle class citizens have had “stagnating earnings and fewer economic resources than [they] had in the early 1990s.” This adversely affects home ownership, retirement, health, and life expectancy. However, the upper middle class fared significantly better, a divide that has widened since the 1990s.</h3>
-                <br>
-                <br>
-                <h3>Not only could the less wealthy fall behind affluent peers due to access to technology, they are also less inclined to play sports at all. Budget cuts also affect the number of people playing sports in school, which could be a larger issue in less wealthy communities.</h3>
-                <br>
-                <br>
-                <h3>In 1900s Germany, a sports guide claimed that a perfect rowing team can only be formed by people with the same educational and cultural background.</h3>
-            </div>
+            <iframe src="https://prezi.com/p/embed/M4gWBQxcyuiPhVFvIJum/" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" height="100%" width="100%"></iframe>
         </div>
     </div>
 </body>

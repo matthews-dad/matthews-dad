@@ -39,7 +39,7 @@ body{
 }
 .slides h2{
     font-weight:600px;
-    font-size:60px;
+    font-size:1vw;
     position:absolute;
     align-self:center;
     margin-left: 5%;
