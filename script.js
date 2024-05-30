@@ -1,5 +1,5 @@
 // Target scroll position in vh (viewport height)
-var targetScrollPositionVh = 270; // Replace with the desired scroll position in vh
+var targetScrollPositionVh = 170; // Replace with the desired scroll position in vh
 
 // Convert vh to pixels
 var targetScrollPositionPx = (targetScrollPositionVh / 100) * window.innerHeight;
@@ -17,4 +17,4 @@ var scrollInterval = setInterval(function() {
         // Stop the scrolling
         clearInterval(scrollInterval);
     }
-}, 12);
+}, 17.5);
